@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        MC_VERSION: 1.18.1  # Define la versión aquí también si usas Docker Compose
     ports:
       - "25565:25565"
     volumes:

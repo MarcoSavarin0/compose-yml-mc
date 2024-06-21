@@ -7,8 +7,10 @@ RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 # Configura el directorio de trabajo
 WORKDIR /minecraft
 
-# Descarga el servidor de Minecraft (ejemplo con la última versión)
+# Define la versión del servidor de Minecraft
 ARG MC_VERSION=1.18.1
+
+# Descarga el servidor de Minecraft usando la versión especificada
 RUN wget -q "https://launcher.mojang.com/v1/objects/${MC_VERSION}/server.jar" -O server.jar
 
 # Copia los archivos de configuración necesarios
